@@ -4509,6 +4509,18 @@ final: prev:
     meta.homepage = "https://github.com/smjonas/live-command.nvim/";
   };
 
+  local-highlight-nvim = buildVimPluginFrom2Nix {
+    pname = "local-highlight.nvim";
+    version = "2023-02-12";
+    src = fetchFromGitHub {
+      owner = "tzachar";
+      repo = "local-highlight.nvim";
+      rev = "bdb745d1070822d4986fa815d84eb15727c2de4c";
+      sha256 = "0lbl92kpx4j0klmrb88bkk0qf32s4kp2957bxdiknz8dxgypjaj1";
+    };
+    meta.homepage = "https://github.com/tzachar/local-highlight.nvim/";
+  };
+
   lsp-colors-nvim = buildVimPluginFrom2Nix {
     pname = "lsp-colors.nvim";
     version = "2023-01-23";
