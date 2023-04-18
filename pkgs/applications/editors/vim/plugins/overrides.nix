@@ -703,6 +703,10 @@ self: super: {
     dependencies = with self; [ plenary-nvim nui-nvim ];
   });
 
+  neoai-nvim = super.neoai-nvim.overrideAttrs(old: {
+    dependencies = with self; [ nui-nvim ];
+  });
+
   noice-nvim = super.noice-nvim.overrideAttrs(old: {
     dependencies = with self; [ nui-nvim ];
   });
